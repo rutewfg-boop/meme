@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)file:///C:/Users/wesll/Desktop/logo.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Logo CopperToken</title>
+    <style>
+        body {
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Container para facilitar o download */
+        .logo-container {
+            width: 500px;
+            height: 500px;
+            background: #121212;
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 0 50px rgba(184, 115, 51, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <!-- SVG do Logo -->
+        <svg id="tokenLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+            <!-- Definições de Gradientes e Filtros -->
+            <defs>
+                <!-- Gradiente do Cobre -->
+                <lineargradient id="copperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#d9914c"></stop>
+                    <stop offset="50%" stop-color="#b87333"></stop>
+                    <stop offset="100%" stop-color="#8b5a2b"></stop>
+                </lineargradient>
+                <!-- Gradiente do Fundo -->
+                <radialgradient id="bgGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#2a1f18"></stop>
+                    <stop offset="100%" stop-color="#121212"></stop>
+                </radialgradient>
+                <!-- Sombra -->
+                <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <fedropshadow dx="0" dy="10" stdDeviation="15" flood-color="#000" flood-opacity="0.8"></fedropshadow>
+                </filter>
+            </defs>
+
+            <!-- Fundo Circular -->
+            <circle cx="250" cy="250" r="240" fill="url(#bgGradient)" stroke="#333" stroke-width="2"></circle>
+
+            <!-- Anel Externo de Cobre -->
+            <circle cx="250" cy="250" r="200" fill="none" stroke="url(#copperGradient)" stroke-width="20" filter="url(#dropShadow)"></circle>
+            
+            <!-- Círculo Interno -->
+            <circle cx="250" cy="250" r="170" fill="#1e1e1e" stroke="url(#copperGradient)" stroke-width="5"></circle>
+
+            <!-- Elementos de Conexão (Nós) ao redor do círculo -->
+            <g fill="#d9914c">
+                <circle cx="250" cy="50" r="12"></circle>
+                <circle cx="250" cy="450" r="12"></circle>
+                <circle cx="50" cy="250" r="12"></circle>
+                <circle cx="450" cy="250" r="12"></circle>
+                
+                <circle cx="109" cy="109" r="12"></circle>
+                <circle cx="391" cy="391" r="12"></circle>
+                <circle cx="391" cy="109" r="12"></circle>
+                <circle cx="109" cy="391" r="12"></circle>
+            </g>
+
+            <!-- Linhas conectando os nós ao centro (estilo rede) -->
+            <g stroke="#b87333" stroke-width="3" opacity="0.4">
+                <line x1="250" y1="50" x2="250" y2="150"></line>
+                <line x1="250" y1="450" x2="250" y2="350"></line>
+                <line x1="50" y1="250" x2="150" y2="250"></line>
+                <line x1="450" y1="250" x2="350" y2="250"></line>
+            </g>
+
+            <!-- Raio Central (Energia e Blockchain) -->
+            <path d="M 270 110 L 170 260 L 240 260 L 210 390 L 330 220 L 260 220 Z" fill="url(#copperGradient)" stroke="#fff" stroke-width="3" stroke-linejoin="round" filter="url(#dropShadow)"></path>
+
+            <!-- Letras CPR abaixo do raio -->
+            <text x="250" y="430" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#d9914c" text-anchor="middle" letter-spacing="4">CPR</text>
+            
+            <!-- Anel tecnológico externo fino -->
+            <circle cx="250" cy="250" r="230" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="10, 10"></circle>
+        </svg>
+    </div>
+
+
+</body></html>
